@@ -1,8 +1,10 @@
-import mongoose from "mongoose";
-const { Schema } = mongoose;
-
-const Categroy = new Schema({
-  name: String,
+const mongoose = require("mongoose");
+const { ObjectId } = mongoose.Schema;
+const CategorySchema = new mongoose.Schema({
+  name: {
+    type: String,
+    required: true,
+  },
   itemId: [
     {
       type: ObjectId,
@@ -10,4 +12,4 @@ const Categroy = new Schema({
     },
   ],
 });
-module.exports = mongoose.model("Category", Categroy);
+module.exports = mongoose.model("Category", CategorySchema);

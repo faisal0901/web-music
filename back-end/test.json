@@ -1,0 +1,20 @@
+[
+  {
+    "name": "nature music for deep sleeping",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+    "thumbnail": "https://placeimg.com/640/480/any",
+    "music": "https://link.com"
+  },
+  {
+    "name": "Oceab music for relax",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+    "thumbnail": "https://placeimg.com/640/480/any",
+    " music": "https://link.com"
+  },
+  {
+    "name": "Music for Insomnia relief",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+    "thumbnail": "https://placeimg.com/640/480/any",
+    "music": "https://link.com"
+  }
+]

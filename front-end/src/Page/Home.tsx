@@ -2,15 +2,6 @@ import React from "react";
 import Header from "component/Header";
 import Item from "component/Item";
 import { Container } from "@mui/material";
-import {
-  collection,
-  query,
-  getDocs,
-  collectionGroup,
-} from "firebase/firestore";
-
-import CircularProgress from "@mui/material/CircularProgress";
-import db from "../firebase/config";
 
 const Home: React.FC = () => {
   const [data, setData] = React.useState<any | null>(null);
