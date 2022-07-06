@@ -3,7 +3,7 @@ var mongoose = require("mongoose");
 
 // Connect to MongoDB via Mongoose
 seeder.connect(
-  "mongodb://localhost:27017/db-music",
+  process.env.DATABASE_URL,
   {
     useNewUrlParser: true,
     useCreateIndex: true,

@@ -12,4 +12,16 @@ module.exports = {
       console.log(error);
     }
   },
+  DetailPage: async (req, res) => {
+    try {
+      const { id } = req;
+      const category = await Category.find().populate({
+        path: "itemId",
+        select: "_id name music description thumbnail",
+      });
+      return res.json({ category });
+    } catch (error) {
+      console.log(error);
+    }
+  },
 };

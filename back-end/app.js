@@ -4,11 +4,13 @@ const path = require("path");
 const cookieParser = require("cookie-parser");
 const logger = require("morgan");
 const cors = require("cors");
+require("dotenv").config();
 const indexRouter = require("./routes/index");
 const apiRouter = require("./routes/api");
 const mongoose = require("mongoose");
 const app = express();
-mongoose.connect("mongodb://localhost:27017/db-music", {
+
+mongoose.connect(process.env.DATABASE_URL, {
   useNewUrlParser: true,
   useCreateIndex: false,
   useFindAndModify: true,
