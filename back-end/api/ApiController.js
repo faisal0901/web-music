@@ -9,19 +9,16 @@ module.exports = {
       });
       return res.json({ category });
     } catch (error) {
-      console.log(error);
+      return res.json({ error });
     }
   },
   DetailPage: async (req, res) => {
     try {
-      const { id } = req;
-      const category = await Category.find().populate({
-        path: "itemId",
-        select: "_id name music description thumbnail",
-      });
-      return res.json({ category });
+      const { id } = req.params;
+      const item = await Item.findOne({ _id: id });
+      return res.status(200).json({ item });
     } catch (error) {
-      console.log(error);
+      return res.json({ error });
     }
   },
 };
