@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  Container,
-  AppBar,
-  Toolbar,
-  Typography,
-  Box,
-  Button,
-} from "@mui/material";
+import { AppBar, Toolbar, Typography, Box, Button } from "@mui/material";
 
 const Header: React.FC = () => {
   const pages: string[] = ["Sleeps", "Asmr", "Lofi"];

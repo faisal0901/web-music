@@ -5,7 +5,7 @@ import { Container } from "@mui/system";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
-import Button from "@mui/material/Button";
+
 import Typography from "@mui/material/Typography";
 type ItemProps = {
   data?:
@@ -22,6 +22,7 @@ type ItemProps = {
     | undefined;
 };
 const Item: React.FC<ItemProps> = (props: ItemProps) => {
+  console.log(props.data);
   return (
     <div>
       {props.data &&
@@ -31,29 +32,24 @@ const Item: React.FC<ItemProps> = (props: ItemProps) => {
               <Container maxWidth="xl" key={`card-${index}`}>
                 <div>{value?.name ?? "null"}</div>
                 <div style={{ display: "flex", paddingTop: 15 }}>
-                  {value.item.map((val: any, num: any) => {
+                  {value.itemId.map((val: any, num: any) => {
                     return (
                       <Card sx={{ maxWidth: 345 }} style={{ marginRight: 20 }}>
                         <CardMedia
                           component="img"
-                          height="140"
-                          image="/static/images/cards/contemplative-reptile.jpg"
-                          alt="green iguana"
+                          height="160"
+                          image={val.thumbnail}
+                          alt={val.name}
                         />
                         <CardContent>
                           <Typography gutterBottom variant="h5" component="div">
-                            Lizard
+                            {val.name}
                           </Typography>
                           <Typography variant="body2" color="text.secondary">
-                            Lizards are a widespread group of squamate reptiles,
-                            with over 6,000 species, ranging across all
-                            continents except Antarctica
+                            {val.description}
                           </Typography>
                         </CardContent>
-                        <CardActions>
-                          <Button size="small">Share</Button>
-                          <Button size="small">Learn More</Button>
-                        </CardActions>
+                        <CardActions></CardActions>
                       </Card>
                     );
                   })}
